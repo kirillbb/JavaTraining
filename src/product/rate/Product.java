@@ -16,7 +16,7 @@ public class Product {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(name).append(" - ")
-                .append(price).append(" $ - средняя оценка: ")
+                .append(String.format("%.2f", price)).append(" $ - средняя оценка: ")
                 .append(String.format("%.2f", getAvgRating())).append("\n");
 
         return sb.toString();
