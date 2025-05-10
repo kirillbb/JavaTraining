@@ -8,9 +8,9 @@ public class InputService {
 
     public void fillProducts(ProductRepository repository) {
         while (true) {
-            System.out.println("Введите название товара (или 'стоп'):");
+            System.out.println("Введите название товара (или 'stop' / 'стоп'):");
             String name = scanner.nextLine();
-            if (name.equalsIgnoreCase("стоп")) break;
+            if (name.equalsIgnoreCase("stop") || name.equalsIgnoreCase("стоп")) break;
 
             System.out.println("Введите цену:");
             double price = scanner.nextDouble();
