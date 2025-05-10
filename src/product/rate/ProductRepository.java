@@ -12,8 +12,4 @@ public class ProductRepository {
     public ArrayList<Product> getAllProducts() {
         return products;
     }
-
-    public void createProduct(Product product) {
-        products.add(new Product());
-    }
 }
