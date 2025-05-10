@@ -8,7 +8,7 @@ public class ProductManager {
     public ArrayList<Product> getTopRatedProducts(ArrayList<Product> products){
         ArrayList<Product> result = new ArrayList<>();
         for (Product product : products){
-            if (product.getAvgRating() > 4.0){
+            if (product.getAvgRating() >= 4.0){
                 result.add(product);
             }
         }
