@@ -27,7 +27,7 @@ public class InputService {
         }
     }
 
-    public ArrayList<Integer> convertToRatingList(String input) {
+    private ArrayList<Integer> convertToRatingList(String input) {
         String[] parts = input.split(" ");
         ArrayList<Integer> ratingList = new ArrayList<>();
 
