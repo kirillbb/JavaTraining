@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ProductManager {
 
     public ArrayList<Product> getTopRatedProducts(ArrayList<Product> products) {
-        if (products.isEmpty()) return null;
+        if (products.isEmpty()) new ArrayList<>();
 
         ArrayList<Product> result = new ArrayList<>();
         for (Product product : products) {
