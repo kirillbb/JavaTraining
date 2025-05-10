@@ -4,7 +4,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProductManager {
-    public void productDataEntry(ProductRepository repository) {
+
+    public ArrayList<Product> getTopRatedProducts(ArrayList<Product> products){
+        ArrayList<Product> result = new ArrayList<>();
+        for (Product product : products){
+            if (product.getAvgRating() > 4.0){
+                result.add(product);
+            }
+        }
+        return result;
+    }
+
+    /*public void productDataEntry(ProductRepository repository) {
         Scanner scanner = new Scanner((System.in));
         ArrayList<Product> products = repository.getAllProducts();
 
@@ -76,5 +87,5 @@ public class ProductManager {
 
     public static boolean isStop(String string) {
         return string.equalsIgnoreCase("stop");
-    }
+    }*/
 }
