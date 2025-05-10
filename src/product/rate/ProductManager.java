@@ -15,6 +15,16 @@ public class ProductManager {
         return result;
     }
 
+    public Product getBestProduct(ArrayList<Product> products){
+        Product best = products.get(0);
+        for (Product product : products){
+            if (product.getAvgRating() > best.getAvgRating()){
+                best = product;
+            }
+        }
+        return best;
+    }
+
     /*public void productDataEntry(ProductRepository repository) {
         Scanner scanner = new Scanner((System.in));
         ArrayList<Product> products = repository.getAllProducts();
