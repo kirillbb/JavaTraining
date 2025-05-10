@@ -11,7 +11,7 @@ public class Starter {
         inputService.fillProducts(repository);
         ArrayList<Product> products = repository.getAllProducts();
 
-        if (products != null) {
+        if (!products.isEmpty()) {
             printProducts(products);
 
             System.out.println("Товары с рейтингом выше 4.0:");
