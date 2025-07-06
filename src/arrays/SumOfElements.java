@@ -1,6 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class SumOfElements {
@@ -25,7 +24,7 @@ public class SumOfElements {
         System.out.println(printMatrix(transposedMatrix));
     }
 
-    public static int[][] transpositionMatrix(int[][] matrix){
+    public static int[][] transpositionMatrix(int[][] matrix) {
         int[][] resultMatrix = new int[4][3];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -38,13 +37,14 @@ public class SumOfElements {
 
     public static int rowMin(int[] rowArray) {
         int result = 0;
-        if(rowArray.length >=1){
+        if (rowArray.length >= 1) {
             result = rowArray[0];
         }
         for (int i = 0; i < rowArray.length; i++) {
-            if(result >= rowArray[i]) {
+            if (result >= rowArray[i]) {
                 result = rowArray[i];
-            };
+            }
+            ;
         }
 
         return result;
