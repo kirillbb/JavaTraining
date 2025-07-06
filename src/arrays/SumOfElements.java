@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class SumOfElements {
@@ -16,6 +17,17 @@ public class SumOfElements {
         }
 
         System.out.println(stringBuilder);
+    }
+
+    public static int rowMin(int[] rowArray) {
+        int result = 0;
+        for (int i = 0; i < rowArray.length; i++) {
+            if(result > rowArray[i]) {
+                result = rowArray[i];
+            };
+        }
+
+        return result;
     }
 
     public static int findSum(int[][] matrix) {
