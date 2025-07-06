@@ -8,6 +8,14 @@ public class SumOfElements {
 
         System.out.println(printMatrix(matrix));
         System.out.println("Sum: " + findSum(matrix));
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = 0; i < matrix.length; i++) {
+            stringBuilder.append("Row ").append(i + 1).append(": sum = ").append(findRowSum(matrix[i])).append("\n");
+        }
+
+        System.out.println(stringBuilder);
     }
 
     public static int findSum(int[][] matrix) {
@@ -21,13 +29,22 @@ public class SumOfElements {
         return result;
     }
 
+    public static int findRowSum(int[] rowArray) {
+        int result = 0;
+        for (int i = 0; i < rowArray.length; i++) {
+            result += rowArray[i];
+        }
+
+        return result;
+    }
+
     public static int[][] fillMatrix() {
         int[][] matrix = new int[3][4];
         Random random = new Random();
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = random.nextInt(1000) + 1;
+                matrix[i][j] = random.nextInt(10) + 1;
             }
         }
 
