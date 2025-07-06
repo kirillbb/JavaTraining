@@ -20,6 +20,20 @@ public class SumOfElements {
         }
 
         System.out.println(stringBuilder);
+
+        int[][] transposedMatrix = transpositionMatrix(matrix);
+        System.out.println(printMatrix(transposedMatrix));
+    }
+
+    public static int[][] transpositionMatrix(int[][] matrix){
+        int[][] resultMatrix = new int[4][3];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                resultMatrix[j][i] = matrix[i][j];
+            }
+        }
+
+        return resultMatrix;
     }
 
     public static int rowMin(int[] rowArray) {
