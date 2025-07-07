@@ -15,6 +15,8 @@ public class StringTraining {
         System.out.println("Longest word: " + getLongestWord(words));
 
         System.out.println("Number of digits: " + digitCount(string));
+
+        System.out.println("Reversed: " + getReversedString(string));
     }
 
     public static String[] getWordArray(String inputString) {
@@ -26,9 +28,9 @@ public class StringTraining {
     public static String getLongestWord(String[] words) {
         String longestWord = words[0];
 
-        for (int i = 0; i < words.length; i++) {
-            if (longestWord.length() < words[i].length()) {
-                longestWord = words[i];
+        for (String word : words) {
+            if (longestWord.length() < word.length()) {
+                longestWord = word;
             }
         }
 
@@ -45,5 +47,9 @@ public class StringTraining {
         }
 
         return result;
+    }
+
+    public static String getReversedString(String inputString) {
+        return new StringBuilder(inputString).reverse().toString();
     }
 }
