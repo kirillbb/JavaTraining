@@ -9,13 +9,12 @@ public class StringTraining {
         System.out.println("Enter the string:");
         String string = scanner.nextLine();
 
-        System.out.println("Word count:" + wordCount(string));
+        System.out.println("Word count:" + getWordArray(string).length);
     }
 
-    public static int wordCount(String inputString) {
+    public static String[] getWordArray(String inputString) {
         inputString = inputString.trim();
-        String[] words = inputString.split("\\s+");
 
-        return words.length;
+        return inputString.split("\\s+");
     }
 }
